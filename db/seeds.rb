@@ -14,3 +14,8 @@ Movie.create(title: "Ocean's Eight", overview: "Debbie Ocean, a criminal masterm
 List.create(name:"Drama")
 List.create(name:"Action")
 List.create(name:"Comedy")
+
+Bookmark.create(comment: "recomended by Adnane", list_id: 1, movie_id: 1)
+Bookmark.create(comment: "to watch with my freind ", list_id: 2, movie_id: 4)
+Bookmark.create(comment: "to watch with my freind", list_id: 2, movie_id: 3)
+Bookmark.create(comment: "recomended by Adnane", list_id: 1, movie_id: 2)

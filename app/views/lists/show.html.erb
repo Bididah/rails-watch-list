@@ -1,5 +1,17 @@
-<div class="containe">
+<div class="container">
   <h1><%= @list.name %></h1>
+  <% @bookmarks.each do |b| %>
+    <% movie = Movie.find(b.movie_id) %>
+    <% url = movie.poster_url %>
+    <div class="card" style="width: 18rem;">
+       <img src= <%=url%> class="card-img-top" alt="poster">
+       <div class="card-body">
+         <h5 class="card-title"> <%= movie.title %> </h5>
+         <p class="card-text"> <%= movie.overview %> </p>
+         <p><%= b.comment %></p>
+       </div>
+    </div>
+  <%end%>
 </div>
 
-<%= link_to "back to lists", lists_path, {class: "btn btn-primary"} %>
+<%= link_to "back to lists", lists_path, {class: "btn btn-primary ml-3"} %>
